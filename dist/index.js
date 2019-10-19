@@ -15879,6 +15879,7 @@ exports.main = () => __awaiter(void 0, void 0, void 0, function* () {
         yield exports.uploadReleaseArtifacts(client, releaseUploadUrl, args.files);
         core.debug(`Exporting environment variable AUTOMATIC_RELEASES_TAG with value ${releaseTag}`);
         core.exportVariable('AUTOMATIC_RELEASES_TAG', releaseTag);
+        core.setOutput('automatic_releases_tag', releaseTag);
     }
     catch (error) {
         core.setFailed(error.message);
