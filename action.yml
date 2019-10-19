@@ -1,0 +1,30 @@
+name: "Automatic Releases"
+author: "marvinpinto"
+description: "Automate the GitHub release process with assets, changelogs, pre-releases, and more"
+inputs:
+  repo_token:
+    description: "GitHub secret token"
+    required: true
+  automatic_release_tag:
+    description: "Git tag (for automatic releases)"
+    required: false
+  draft:
+    description: "Should this release be marked as a draft?"
+    required: false
+    default: false
+  prerelease:
+    description: "Should this release be marked as a pre-release?"
+    required: false
+    default: true
+  title:
+    description: "Release title (for automatic releases)"
+    required: false
+  files:
+    description: "Assets to upload to the release"
+    required: false
+runs:
+  using: "node12"
+  main: "dist/index.js"
+branding:
+  icon: "git-merge"
+  color: "red"
