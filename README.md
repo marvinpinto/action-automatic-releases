@@ -11,7 +11,7 @@ This action simplifies the GitHub release process by automatically uploading ass
 1. [How to get help](#how-to-get-help)
 1. [License](#license)
 
-> **Note**: The `marvinpinto/action-automatic-releases` repository is an automatically generated mirror of the [marvinpinto/actions](https://github.com/marvinpinto/actions) monorepo containing this and other actions. Actions in monorepo's cannot currently be published to the GitHub Actions Marketplace. Please file issues and pull requests over there.
+> **NOTE**: The `marvinpinto/action-automatic-releases` repository is an automatically generated mirror of the [marvinpinto/actions](https://github.com/marvinpinto/actions) monorepo containing this and other actions. Please file issues and pull requests over there.
 
 ## Usage Examples
 
@@ -120,7 +120,7 @@ The GitHub Actions framework allows you to trigger this (and other) actions on _
 
 ## Versioning
 
-Every commit that lands on master for this project triggers an automatic build as well as a tagged release called `latest`. If you don't wish to live on the bleeding edge you may use a stable release instead. See [releases](/releases) for the available versions.
+Every commit that lands on master for this project triggers an automatic build as well as a tagged release called `latest`. If you don't wish to live on the bleeding edge you may use a stable release instead. See [releases](/releases/latest) for the available versions.
 
 ```yaml
 - uses: "marvinpinto/actions-automatic-releases@<VERSION>"
