@@ -11,6 +11,8 @@ This action simplifies the GitHub release process by automatically uploading ass
 1. [How to get help](#how-to-get-help)
 1. [License](#license)
 
+> **Note**: The `marvinpinto/action-automatic-releases` repository is an automatically generated mirror of the [marvinpinto/actions](https://github.com/marvinpinto/actions) monorepo containing this and other actions. Actions in monorepo's cannot currently be published to the GitHub Actions Marketplace. Please file issues and pull requests over there.
+
 ## Usage Examples
 
 ### Automatically generate a pre-release when changes land on master
@@ -24,7 +26,7 @@ This example workflow will kick in as soon as changes land on `master`. After ru
 1. Upload `LICENSE.txt` and any `jar` files as release assets.
 1. Mark this release as a `pre-release`.
 
-You can see an example of the end result of this workflow [on this repository](../../../../releases/tag/latest).
+You can see a working example of this workflow over at [marvinpinto/actions](https://github.com/marvinpinto/actions/releases/tag/latest).
 
 ```yaml
 ---
@@ -46,7 +48,7 @@ jobs:
         run: |
           echo "done!"
 
-      - uses: "marvinpinto/actions/packages/automatic-releases@latest"
+      - uses: "marvinpinto/actions-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
@@ -65,7 +67,7 @@ Similar to the previous example, this workflow will kick in as soon as new tags 
 1. Generate a new release and associate it with this tag.
 1. Upload `LICENSE.txt` and any `jar` files as release assets.
 
-As before, you can see an example of the end result [here](../../../../releases/latest).
+Once again there's an example of this over at [marvinpinto/actions](https://github.com/marvinpinto/actions/releases/latest).
 
 ```yaml
 ---
@@ -87,7 +89,7 @@ jobs:
         run: |
           echo "done!"
 
-      - uses: "marvinpinto/actions/packages/automatic-releases@latest"
+      - uses: "marvinpinto/actions-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
@@ -118,15 +120,15 @@ The GitHub Actions framework allows you to trigger this (and other) actions on _
 
 ## Versioning
 
-Every commit that lands on master for this project triggers an automatic build as well as a tagged release called `latest`. If you don't wish to live on the bleeding edge you may use a stable release instead. See [releases](../../../../releases) for the available versions.
+Every commit that lands on master for this project triggers an automatic build as well as a tagged release called `latest`. If you don't wish to live on the bleeding edge you may use a stable release instead. See [releases](/releases) for the available versions.
 
 ```yaml
-- uses: "marvinpinto/actions/packages/automatic-releases@<VERSION>"
+- uses: "marvinpinto/actions-automatic-releases@<VERSION>"
 ```
 
 ## How to get help
 
-The main [README](../../README.md) for this project has a bunch of information related to debugging & submitting issues. If you're still stuck, try and get a hold of me on [keybase](https://keybase.io/marvinpinto) and I'll do my best.
+The main [README](https://github.com/marvinpinto/actions/blob/master/README.md) for this project has a bunch of information related to debugging & submitting issues. If you're still stuck, try and get a hold of me on [keybase](https://keybase.io/marvinpinto) and I will do my best to help you out.
 
 ## License
 
