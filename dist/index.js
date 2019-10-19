@@ -10497,7 +10497,6 @@ exports.getChangelogOptions = () => __awaiter(void 0, void 0, void 0, function* 
     core.debug(`Changelog options: ${JSON.stringify(defaultOpts)}`);
     return defaultOpts;
 });
-// istanbul ignore next
 exports.octokitLogger = (...args) => {
     return args
         .map(arg => {
@@ -10507,9 +10506,6 @@ exports.octokitLogger = (...args) => {
         // Do not log file buffers
         if (arg.file) {
             arg.file = '== raw file buffer info removed ==';
-        }
-        if (arg.data) {
-            arg.data = '== raw file buffer info removed ==';
         }
         return JSON.stringify(arg);
     })
@@ -15763,7 +15759,6 @@ const getCommitsSinceRelease = (client, tagInfo, currentSha) => __awaiter(void 0
         core.info(`Successfully retrieved ${resp.data.commits.length} commits between ${previousReleaseRef} and ${currentSha}`);
     }
     catch (err) {
-        // istanbul ignore next
         core.warning(`Could not find any commits between ${previousReleaseRef} and ${currentSha}`);
     }
     let commits = [];
@@ -15877,8 +15872,6 @@ exports.main = () => __awaiter(void 0, void 0, void 0, function* () {
             body: changelog,
         });
         yield exports.uploadReleaseArtifacts(client, releaseUploadUrl, args.files);
-        core.debug(`Exporting environment variable AUTOMATIC_RELEASES_TAG with value ${releaseTag}`);
-        core.exportVariable('AUTOMATIC_RELEASES_TAG', releaseTag);
     }
     catch (error) {
         core.setFailed(error.message);
