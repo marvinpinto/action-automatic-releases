@@ -24,7 +24,7 @@ inputs:
     required: false
 outputs:
   automatic_releases_tag:
-    decription: "The release tag this action just processed"
+    description: "The release tag this action just processed"
 runs:
   using: "node12"
   main: "dist/index.js"
