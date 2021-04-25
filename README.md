@@ -109,6 +109,15 @@ jobs:
 | `title`                 | Release title; defaults to the tag name if none specified. | Tag Name |
 | `files`                 | Files to upload as part of the release assets.             | `null`   |
 
+## Outputs
+
+The following output values can be accessed via `${{ steps.<step-id>.outputs.<output-name> }}`:
+
+| Name                     | Description                                            | Type   |
+| ------------------------ | ------------------------------------------------------ | ------ |
+| `automatic_releases_tag` | The release tag this action just processed             | string |
+| `upload_url`             | The URL for uploading additional assets to the release | string |
+
 ### Notes:
 
 - Parameters denoted with `**` are required.

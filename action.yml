@@ -25,6 +25,8 @@ inputs:
 outputs:
   automatic_releases_tag:
     description: "The release tag this action just processed"
+  upload_url:
+    description: "The URL for uploading additional assets to the release"
 runs:
   using: "node12"
   main: "dist/index.js"
