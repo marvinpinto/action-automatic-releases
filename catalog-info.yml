@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: action-automatic-releases
+  description: |
+    This action simplifies the GitHub release process by automatically uploading assets, generating changelogs, handling pre-releases, and so on
+  annotations:
+    github.com/project-slug: Tradeshift/action-automatic-releases
+  tags:
+    - github-action
+    - nodejs
+    - fork
+spec:
+  type: library
+  owner: developer-productivity
+  lifecycle: production
