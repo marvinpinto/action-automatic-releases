@@ -28,7 +28,7 @@ outputs:
   upload_url:
     description: "The URL for uploading additional assets to the release"
 runs:
-  using: "node12"
+  using: "node16"
   main: "dist/index.js"
 branding:
   icon: "git-merge"
