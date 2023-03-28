@@ -22,6 +22,10 @@ inputs:
   files:
     description: "Assets to upload to the release"
     required: false
+  generate_release_notes:
+    description: "Whether to automatically generate the name and body for this release. If name is specified, the specified name will be used; otherwise, a name will be automatically generated"
+    required: : false
+
 outputs:
   automatic_releases_tag:
     description: "The release tag this action just processed"
