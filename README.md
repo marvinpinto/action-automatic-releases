@@ -101,13 +101,15 @@ jobs:
 ## Supported Parameters
 
 | Parameter               | Description                                                | Default  |
-| ----------------------- | ---------------------------------------------------------- | -------- |
+| ----------------------- |------------------------------------------------------------|----------|
 | `repo_token`\*\*        | GitHub Action token, e.g. `"${{ secrets.GITHUB_TOKEN }}"`. | `null`   |
 | `draft`                 | Mark this release as a draft?                              | `false`  |
 | `prerelease`            | Mark this release as a pre-release?                        | `true`   |
 | `automatic_release_tag` | Tag name to use for automatic releases, e.g `latest`.      | `null`   |
 | `title`                 | Release title; defaults to the tag name if none specified. | Tag Name |
 | `files`                 | Files to upload as part of the release assets.             | `null`   |
+| `generate_release_notes`| Automaticaly generate release notes                        | `false`  |
+
 
 ## Outputs
 
